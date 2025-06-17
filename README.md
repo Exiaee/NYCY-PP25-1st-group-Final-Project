@@ -4,7 +4,7 @@ This project provides tools to compute and compare perceptual hashes (pHash) for
 
 ## Subprojects
 
-### 📊 [pHash_Serial_OpenMP_GCC_O3](./cli_benchmark/)
+### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
 A command-line tool to generate and compare pHashes using serial and OpenMP implementations, with optional GCC `-O3` optimization.
 
 Features:
