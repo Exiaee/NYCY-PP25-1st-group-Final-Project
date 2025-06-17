@@ -12,7 +12,7 @@ Features:
 - OpenMP acceleration GCC `-O3` optimization
 - Elapsed time for each method
 - Generate pHash values for all images in the dataset
-### 📊 [pHash_cuda](./pHash_cuda/)
+### ⚡ [pHash_cuda](./pHash_cuda/)
 A command-line tool to generate pHash values for images using 3 cuda implementations.
 
 Features:
@@ -23,7 +23,7 @@ Features:
 - Generate pHash values for all images in the dataset
 
 ### 🖼️ [pHash_Comparision_QT](./pHash_Comparison_QT/)
-A Qt-based GUI application to search for similar images using perceptual hashes and multiple comparison methods.
+A Qt-based GUI application to load pHash search for similar images using perceptual hashes and multiple comparison methods.
 
 Features:
 - GUI for image import/search
