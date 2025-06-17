@@ -12,12 +12,13 @@ Features:
 - OpenMP acceleration GCC `-O3` optimization
 - Elapsed time for each method
 - Generate pHash values for all images in the dataset
-### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
-A command-line tool to generate pHash values for images using serial and OpenMP implementations, with GCC `-O3` optimization.
+### 📊 [pHash_cuda](./pHash_cuda/)
+A command-line tool to generate pHash values for images using 3 cuda implementations.
 
 Features:
-- Serial version with GCC `-O3` optimization
-- OpenMP acceleration GCC `-O3` optimization
+- cuda1
+- cuda2
+- cuda3
 - Elapsed time for each method
 - Generate pHash values for all images in the dataset
 
