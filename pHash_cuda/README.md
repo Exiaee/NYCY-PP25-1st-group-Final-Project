@@ -1,25 +1,28 @@
-# pHash_Serial_OpenMP_GCC_O3
+# pHash_cuda
 
-This project generates pHash values using 2 processing approaches in C++:
+This project generates pHash values using 3 processing approaches in C++:
 
-- Serial implementation with `-O3` optimization
-- OpenMP-based parallelism with `-O3` optimization
+- cuda1
+- cuda2
+- cuda3
 
 ## Overview
 
 The goal is to measure the elapsed time of pHash generation and comparison using different execution models, 
-and evaluate performance and speedup benefits of parallel processing.
+and evaluate performance and speedup benefits of cuda processing.
 
 ## Features
 
 - Compute pHash of images
 - Evaluate performance with:
-  - Serial C++ with `-O3` optimization
-  - OpenMP with `-O3` optimization
+  - cuda1
+  - cuda2
+  - cuda3
 
 ## Dependencies
 
-- GCC with OpenMP support
+- GCC 12.4.0 or later
+- CUDA 12.8
 - C++17 or later
 - stb_image for image loading (depending on version)
 
@@ -29,32 +32,29 @@ and evaluate performance and speedup benefits of parallel processing.
 ### Linux
 
 ```bash
-# Build the serial version
-make all
-# Build the OpenMP version
-make omp
+# Build the OpenCV version
+make cv
+# Build the cuda version
+> Note: `phash_cuda2.cu` in Makefile can be manually replaced if testing different CUDA implementations before running `make cuda`.
+make cuda
 # Clean up build artifacts
 make clean
 ```
 ## Usage
 
 ```bash
-# Run Serial version
-run [-c] [cpu thread] ./phash_dir <image_folder> [image_count]
-
-# Run OpenMP version
-run [-c] [cpu thread] ./phash_dir_omp <image_folder> [image_count]
+# Run cuda version
+run [-c] [cpu thread] ./phash_cu <image_folder>
 ```
 
 ### Options
 - `-c [cpu thread]`: (Optional) Pin to specific CPU core/thread
 - `image_folder`: Folder containing input images
-- `image_count`: (Optional) number of images to process; if not set, process all
 
 Example:
 
 ```bash
-run -c 8 ./phash_dir_omp ./dataset 1000
+run -c 8 ./phash_cu ./dataset
 ```
 
 ## Output
