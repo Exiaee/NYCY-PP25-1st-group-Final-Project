@@ -68,7 +68,7 @@ mingw32-make
 ## Project Structure
 
 ```text
-QtImageSQL_Advanced/
+pHash_Comparison_QT/
 ├── main.cpp                 # Entry point
 ├── mainwindow.ui            # Main GUI layout
 ├── newwindow.ui             # Secondary window layout
