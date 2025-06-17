@@ -2,8 +2,8 @@
 
 This project benchmarks perceptual hash (pHash) similarity comparisons using different parallel processing approaches in C++:
 
-- Serial implementation
-- OpenMP-based parallelism
+- Serial implementation with `-O3` optimization
+- OpenMP-based parallelism with `-O3` optimization
 - Compiled with `-O3` optimization using GCC
 
 ## Overview
@@ -25,26 +25,25 @@ The goal is to measure and compare the performance of Hamming distance-based ima
 
 - GCC with OpenMP support
 - C++17 or later
-- stb_image or OpenCV for image loading (depending on version)
+- stb_image for image loading (depending on version)
 
 ## Build Instructions
+- This project is tested and runs successfully on NYCU CS departmental servers using Makefile-based build flow.
 
-### Linux / WSL / macOS
-
-```bash
-g++ -O3 -fopenmp -std=c++17 main.cpp imagephash.cpp -o phash_compare
-```
-
-### Windows (MSYS2 / MinGW)
+### Linux
 
 ```bash
-g++ -O3 -fopenmp -std=c++17 main.cpp imagephash.cpp -o phash_compare.exe
+# Build the serial version
+make all
+# Build the OpenMP version
+make omp
 ```
 
 ## Usage
 
 ```bash
 ./phash_compare <image_folder> <comparison_mode>
+run -c [cpu thread] ./phash_dir_omp 
 ```
 
 Where `<comparison_mode>` is one of:
@@ -60,8 +59,7 @@ Example:
 ## Output
 
 - Elapsed time for each method
-- Speedup of OpenMP vs Serial
-- List of similar image pairs (optional)
+- Generated pHash values for all images in the dataset
 
 ## License
 
