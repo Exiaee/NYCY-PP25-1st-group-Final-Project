@@ -1,12 +1,11 @@
 # pHash Comparison QT
 
-A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to search for visually similar images using different parallel processing methods (Sequential, OpenMP, pThread, etc.).
+A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to search for visually similar images using different processing methods (Sequential, OpenMP, pThread, etc.).
 
 ## Features
-
+- Oepn and load SQLite database
 - Image loading and preprocessing
 - Compute perceptual hash (pHash)
-- Oepn and load SQLite database
 - Search for similar images by setting a Hamming distance threshold.
 - Supports multiple search modes:
   - Sequential
@@ -19,8 +18,8 @@ A Qt-based GUI application for image similarity search using perceptual hashing 
 - Qt 5 or Qt 6 (QtWidgets, QtSql, QtConcurrent)
 - SQLite3
 - C++17 or later
-- (Optional) OpenMP support for parallel speedup
-- (Optional) Python 3.x + OpenCV (for CV-based pHash)
+- OpenMP support for parallel speedup
+- Python 3.x + OpenCV (for CV-based pHash)
 
 ## Build Instructions
 
@@ -86,8 +85,8 @@ pHash_Comparison_QT/
 
 1. Launch the application.
 2. Click **Open DB** to load the SQLite database.
-3. Click **Show DB Items** to view the contents of the database.
-4. Choose the comparison method (Sequential/OpenMP/PThread) and set the Hamming Distance threshold..
+3. Click **Show DB Items** to view the top five entries of the database.
+4. Choose the comparison method (Sequential/OpenMP/PThread) and set the Hamming Distance threshold.
 5. Click **Find Similar** to select a query image and compare it against the database.
 6. Matching results will be displayed in the Image List area.
 7. The selected image and its pHash will be shown in a secondary window.
