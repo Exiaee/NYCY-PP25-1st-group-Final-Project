@@ -35,8 +35,8 @@ and evaluate performance and speedup benefits of cuda processing.
 # Build the OpenCV version
 make cv
 # Build the cuda version
-> Note: `phash_cuda2.cu` in Makefile can be manually replaced if testing different CUDA implementations before running `make cuda`.
 make cuda
+> Note: `phash_cuda2.cu` in Makefile can be manually replaced if testing different CUDA implementations before running `make cuda`.
 # Clean up build artifacts
 make clean
 ```
