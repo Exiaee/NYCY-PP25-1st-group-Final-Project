@@ -1,15 +1,15 @@
 # QtImageSQL\_Advanced
 
-A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to insert images into a SQLite database and search for visually similar images using different parallel processing methods (serial, OpenMP, QThread, etc.).
+A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to search for visually similar images using different parallel processing methods (Sequential, OpenMP, pThread, etc.).
 
 ## Features
 
 - Image loading and preprocessing
 - Compute perceptual hash (pHash)
 - Oepn and load pHash SQLite database
-- Search similar images by Hamming distance
+- Search for similar images by setting a Hamming distance threshold.
 - Supports multiple search modes:
-  - Serial
+  - Sequential
   - OpenMP
   - PThread
 - Qt GUI for image selection, preview, and search results
@@ -69,12 +69,14 @@ mingw32-make
 
 ```text
 QtImageSQL_Advanced/
-├── main.cpp                  # Entry point
+├── main.cpp                 # Entry point
 ├── mainwindow.ui            # Main GUI layout
 ├── newwindow.ui             # Secondary window layout
+├── comparedialog.ui         # Compare dialog GUI
 ├── mainwindow.cpp/h         # GUI logic
 ├── newwindow.cpp/h          # Secondary window logic
-├── imagephash.cpp/h         # pHash algorithm
+├── imagephash.cpp/h         # pHash algorithm from compute_phash.py and Hamming distance comparison
+├── comparedialog.cpp/h      # comparedialog
 ├── database.cpp/h           # SQLite logic
 ├── compute_phash.py         # Compute pHash from loaded image using Python OpenCV
 └── QtImageSQL_Advanced.pro  # Qt project file
@@ -83,16 +85,19 @@ QtImageSQL_Advanced/
 ## How to Use
 
 1. Launch the application.
-2. Click **Insert Images** to import images into the database.
-3. Click **Find Similar** to select a query image.
-4. Choose the comparison method (serial/OpenMP/QThread).
-5. Results will be displayed in a scrollable preview area.
+2. Click **Open DB** to load the database.
+3. Click **Show DB Items** to view the contents of the database.
+4. Choose the comparison method (Sequential/OpenMP/PThread) and set the Hamming Distance threshold..
+5. Click **Find Similar** to select a query image and compare it against the database.
+6. Matching results will be displayed in the Image List area.
+7. The selected image and its pHash will be shown in a secondary window.
+![image](https://github.com/user-attachments/assets/2a8d0c9d-a094-44c7-9ebe-193b0e9f7434)
 
-### Optional: Use Python for pHash Computation
 
-If using Python OpenCV for pHash (e.g., via `ImagePHash::computeHashCV()`):
+### Use Python for pHash Computation
 
-Make sure to configure your Python path manually in code:
+If you are using Python with OpenCV for perceptual hash computation (e.g., via ImagePHash::computeHashCV()),
+make sure to configure the Python executable path manually in **imagephash.cpp**:
 
 ```cpp
 QString pythonExe = "C:/Users/USER/anaconda3/python.exe";  // Modify to your Python path
@@ -106,7 +111,7 @@ pip install opencv-python numpy
 
 You can change the Python path in the application source to match your Anaconda or system-installed Python executable.
 
-## Sample Dataset
+## Sample Dataset and the pHash database
 
 You may download sample images from:
 
