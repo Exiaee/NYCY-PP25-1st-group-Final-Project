@@ -6,7 +6,7 @@ A Qt-based GUI application for image similarity search using perceptual hashing 
 
 - Image loading and preprocessing
 - Compute perceptual hash (pHash)
-- Oepn and load pHash SQLite database
+- Oepn and load SQLite database
 - Search for similar images by setting a Hamming distance threshold.
 - Supports multiple search modes:
   - Sequential
@@ -85,7 +85,7 @@ QtImageSQL_Advanced/
 ## How to Use
 
 1. Launch the application.
-2. Click **Open DB** to load the database.
+2. Click **Open DB** to load the SQLite database.
 3. Click **Show DB Items** to view the contents of the database.
 4. Choose the comparison method (Sequential/OpenMP/PThread) and set the Hamming Distance threshold..
 5. Click **Find Similar** to select a query image and compare it against the database.
