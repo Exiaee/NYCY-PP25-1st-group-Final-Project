@@ -1,7 +1,6 @@
 # NYCY PP25 1st group Final Project
-
-This project provides tools to compute and compare perceptual hashes (pHash) for image similarity detection. It includes both a graphical interface and a command-line benchmarking suite.
-
+- A command-line utility to generate pHash values for images in a dataset
+- A graphical interface to compare images using Hamming distance
 ## Subprojects
 
 ### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
