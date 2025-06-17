@@ -19,7 +19,7 @@ and evaluate performance and speedup benefits of parallel processing.
 
 ## Dependencies
 
-- GCC with OpenMP support
+- GCC 12.4.0 or later with OpenMP support
 - C++17 or later
 - stb_image for image loading (depending on version)
 
