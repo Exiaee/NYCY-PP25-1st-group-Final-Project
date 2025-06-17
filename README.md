@@ -5,19 +5,28 @@ This project provides tools to compute and compare perceptual hashes (pHash) for
 ## Subprojects
 
 ### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
-A command-line tool to generate pHash of images using serial and OpenMP implementations, with GCC `-O3` optimization.
+A command-line tool to generate pHash values for images using serial and OpenMP implementations, with GCC `-O3` optimization.
 
 Features:
 - Serial version with GCC `-O3` optimization
 - OpenMP acceleration GCC `-O3` optimization
-- Dataset batch testing and runtime profiling
+- Elapsed time for each method
+- Generate pHash values for all images in the dataset
+### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
+A command-line tool to generate pHash values for images using serial and OpenMP implementations, with GCC `-O3` optimization.
+
+Features:
+- Serial version with GCC `-O3` optimization
+- OpenMP acceleration GCC `-O3` optimization
+- Elapsed time for each method
+- Generate pHash values for all images in the dataset
 
 ### 🖼️ [pHash_Comparision_QT](./pHash_Comparison_QT/)
-A Qt-based GUI application to insert, manage, and search for similar images using perceptual hashes and multiple comparison methods.
+A Qt-based GUI application to search for similar images using perceptual hashes and multiple comparison methods.
 
 Features:
 - GUI for image import/search
-- Supports OpenMP and PThread comparison
+- Supports Sequential, OpenMP and PThread comparison
 - Load SQLite
 - Python OpenCV support for pHash
 
