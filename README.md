@@ -23,12 +23,12 @@ Features:
 - Generate pHash values for all images in the dataset
 
 ### 🖼️ [pHash_Comparision_QT](./pHash_Comparison_QT/)
-A Qt-based GUI application to load pHash search for similar images using perceptual hashes and multiple comparison methods.
+A Qt-based GUI application to the SQLite database and search for similar images using perceptual hashes and multiple comparison methods.
 
 Features:
+- Load the SQLite database
 - GUI for image import/search
 - Supports Sequential, OpenMP and PThread comparison
-- Load SQLite
 - Python OpenCV support for pHash
 
 ## Dataset Recommendation
