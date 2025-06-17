@@ -1,25 +1,21 @@
 # pHash_Serial_OpenMP_GCC_O3
 
-This project benchmarks perceptual hash (pHash) similarity comparisons using different parallel processing approaches in C++:
+This project generates pHash values using 2 processing approaches in C++:
 
 - Serial implementation with `-O3` optimization
 - OpenMP-based parallelism with `-O3` optimization
-- Compiled with `-O3` optimization using GCC
 
 ## Overview
 
-The goal is to measure and compare the performance of Hamming distance-based image similarity search using pHash under different execution models.
+The goal is to measure the elapsed time of pHash generation and comparison using different execution models, 
+and evaluate performance and speedup benefits of parallel processing.
 
 ## Features
 
-- Compute perceptual hash (pHash) of images
-- Compare hashes using Hamming distance
+- Compute pHash of images
 - Evaluate performance with:
-  - Serial C++ loop
-  - OpenMP parallel loop
-  - GCC with `-O3` optimization
-- Batch test on image datasets
-- Time measurement for benchmarking
+  - Serial C++ with `-O3` optimization
+  - OpenMP with `-O3` optimization
 
 ## Dependencies
 
@@ -37,23 +33,28 @@ The goal is to measure and compare the performance of Hamming distance-based ima
 make all
 # Build the OpenMP version
 make omp
+# Clean up build artifacts
+make clean
 ```
-
 ## Usage
 
 ```bash
-./phash_compare <image_folder> <comparison_mode>
-run -c [cpu thread] ./phash_dir_omp 
+# Run Serial version
+run [-c] [cpu thread] ./phash_dir <image_folder> [image_count]
+
+# Run OpenMP version
+run [-c] [cpu thread] ./phash_dir_omp <image_folder> [image_count]
 ```
 
-Where `<comparison_mode>` is one of:
-- `serial`
-- `openmp`
+### Options
+- `-c [cpu thread]`: (Optional) Pin to specific CPU core/thread
+- `image_folder`: Folder containing input images
+- `image_count`: (Optional) number of images to process; if not set, process all
 
 Example:
 
 ```bash
-./phash_compare ./dataset openmp
+run -c 8 ./phash_dir_omp ./dataset 1000
 ```
 
 ## Output
