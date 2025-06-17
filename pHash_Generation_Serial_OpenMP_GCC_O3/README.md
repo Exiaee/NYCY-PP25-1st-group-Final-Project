@@ -7,7 +7,7 @@ This project generates pHash values using 2 processing approaches in C++:
 
 ## Overview
 
-The goal is to measure the elapsed time of pHash generation and comparison using different execution models, 
+The goal is to measure the elapsed time of pHash generation using different execution models, 
 and evaluate performance and speedup benefits of parallel processing.
 
 ## Features
