@@ -7,6 +7,9 @@ To address performance bottlenecks, parallel computing techniques are employed: 
 - A command-line utility to generate Perceptual Hash values for thousands of images in a public dataset
 - A graphical interface to compare images using **Hamming distance**
 
+## System Workflow
+![alt text](./assets/SystemWorkflow.png)
+
 ## Subprojects
 
 ### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
@@ -16,14 +19,21 @@ Features:
 - Serial version with GCC `-O3` optimization
 - OpenMP acceleration GCC `-O3` optimization
 - Elapsed time for each method
-- Generate pHash values for all images in the dataset
-### ⚡ [pHash_cuda](./pHash_cuda/)
-A command-line tool to generate pHash values for images using 3 cuda implementations.
+- Generated pHash values for all images in the dataset
+
+### 🚀 [pHash_OpenCV](./pHash_OpenCV/)
+A command-line tool to generate pHash values for images implemented by OpenCV library.
 
 Features:
-- cuda1
-- cuda2
-- cuda3
+- OpenCV acceleration with best performance compared with OpenMP and CUDA
+
+### 📈 [pHash_CUDA](./pHash_CUDA/)
+A command-line tool to generate pHash values for images implemented by three CUDA versions.
+
+Features:
+- Implemented CUDA optimization for DCT2D calculation
+- Enhanced performance with Grayscale, Resize, DCT (row-wise and column-wise), and block extraction optimization
+- Enabled asynchronous and parallel execution with CUDA Steam
 - Elapsed time for each method
 - Generate pHash values for all images in the dataset
 
@@ -33,7 +43,7 @@ A Qt-based GUI application to the SQLite database and search for similar images 
 Features:
 - Load the SQLite database
 - GUI for image import/search
-- Supports Sequential, OpenMP and PThread comparison
+- Supported Serial, OpenMP and PThread comparison
 - Python OpenCV support for pHash
 
 ## Dataset Recommendation
