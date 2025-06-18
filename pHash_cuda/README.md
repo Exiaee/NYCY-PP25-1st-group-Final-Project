@@ -43,6 +43,8 @@ make clean
 ## Usage
 
 ```bash
+# Run OpenCV version
+run [-c] [cpu thread] ./phash_cv <image_folder>
 # Run cuda version
 run [-c] [cpu thread] ./phash_cu <image_folder>
 ```
