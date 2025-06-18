@@ -33,7 +33,7 @@ and evaluate performance and speedup benefits of cuda processing.
 ### Linux
 
 ```bash
-### Install OpenCV
+# Install OpenCV
 sudo apt update
 sudo apt install libopencv-dev
 
