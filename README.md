@@ -45,6 +45,9 @@ Features:
 - Supported Sequential, OpenMP and PThread comparison
 - Python OpenCV support for pHash
 
+## Performance Comparison
+![alt text](./assets/Performance.png)
+
 ## Dataset Recommendation
 
 - [UKBench dataset](https://www.kaggle.com/datasets/sunghoshim/ukbench100)
