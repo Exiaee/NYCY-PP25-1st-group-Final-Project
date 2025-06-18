@@ -43,7 +43,7 @@ A Qt-based GUI application to the SQLite database and search for similar images 
 Features:
 - Load the SQLite database
 - GUI for image import/search
-- Supported Serial, OpenMP and PThread comparison
+- Supported Sequential, OpenMP and PThread comparison
 - Python OpenCV support for pHash
 
 ## Dataset Recommendation
