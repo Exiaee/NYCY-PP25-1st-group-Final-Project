@@ -31,8 +31,10 @@ and evaluate performance and speedup benefits of parallel processing.
 ```bash
 # Build the serial version
 make all
+
 # Build the OpenMP version
 make omp
+
 # Clean up build artifacts
 make clean
 ```
