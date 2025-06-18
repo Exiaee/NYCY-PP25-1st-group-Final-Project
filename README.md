@@ -11,10 +11,6 @@ To address performance bottlenecks, parallel computing techniques are employed: 
 ## System Workflow
 ![alt text](./assets/SystemWorkflow.png)
 
-### Built With
-* [![Cplusplus][Cplusplus.com]][Cplusplus-url]
-
-
 ## Subprojects
 ### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
 A command-line tool to generate pHash values for images using serial and OpenMP implementations, with GCC `-O3` optimization.
