@@ -25,6 +25,7 @@ and evaluate performance and speedup benefits of cuda processing.
 - CUDA 12.8
 - C++17 or later
 - stb_image for image loading (depending on version)
+- [OpenCV 4.x](https://opencv.org/) 
 
 ## Build Instructions
 - This project is tested and runs successfully on NYCU CS departmental servers using Makefile-based build flow.
@@ -32,6 +33,10 @@ and evaluate performance and speedup benefits of cuda processing.
 ### Linux
 
 ```bash
+### Install OpenCV
+sudo apt update
+sudo apt install libopencv-dev
+
 # Build the OpenCV version
 make cv
 # Build the cuda version
