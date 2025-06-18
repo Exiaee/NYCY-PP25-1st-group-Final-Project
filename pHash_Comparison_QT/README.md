@@ -94,13 +94,13 @@ pHash_Comparison_QT/
 
 
 ### Use Python for pHash Computation
-
 If you are using Python with OpenCV for perceptual hash computation (e.g., via ImagePHash::computeHashCV()),
 make sure to configure the Python executable path manually in **imagephash.cpp**:
 
 ```cpp
 QString pythonExe = "C:/Users/USER/anaconda3/python.exe";  // Modify to your Python path
 ```
+✅ Make sure opencv-python is installed in that environment, and the path points to the correct Python executable (e.g., from Anaconda).
 
 Ensure the following Python packages are installed:
 
