@@ -39,9 +39,11 @@ sudo apt install libopencv-dev
 
 # Build the OpenCV version
 make cv
+
 # Build the cuda version
 make cuda
 > Note: `phash_cuda2.cu` in Makefile can be manually replaced if testing different CUDA implementations before running `make cuda`.
+
 # Clean up build artifacts
 make clean
 ```
