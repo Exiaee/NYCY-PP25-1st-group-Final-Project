@@ -3,7 +3,8 @@ This project aims to design a content-based image retrieval (CBIR) system using 
 
 To address performance bottlenecks, parallel computing techniques are employed: **NVIDA CUDA** for GPU acceleration, and **OpenMP** for CPU multi-core parallelism have been included. These methods are applied to both hash generation and comparison phases to improve efficiency. The system seeks to deliver real-time image similarity retrieval with enhanced scalability and performance through the integration of perceptual hashing and high-performance parallelization.
 
-- A command-line utility to generate pHash values for images in a dataset
+### Contributions
+- A command-line utility to generate Perceptual Hash values for thousands of images in a public dataset
 - A graphical interface to compare images using **Hamming distance**
 
 ## Subprojects
