@@ -1,4 +1,5 @@
-# NYCU PP25 Final Project - Image Retrieval Based on Perceptual Hashing and CUDA
+# NYCU Parallel Programming Final Project
+# Image Retrieval Based on Perceptual Hashing and CUDA
 This project aims to design a content-based image retrieval (CBIR) system using **Perceptual Hash** to efficiently identify visually similar images. By extracting compact hash representations, the system enables fast ***search by image*** functionality in large-scale datasets. 
 
 To address performance bottlenecks, parallel computing techniques are employed: **NVIDA CUDA** for GPU acceleration, and **OpenMP** for CPU multi-core parallelism have been included. These methods are applied to both hash generation and comparison phases to improve efficiency. The system seeks to deliver real-time image similarity retrieval with enhanced scalability and performance through the integration of perceptual hashing and high-performance parallelization.
@@ -10,8 +11,11 @@ To address performance bottlenecks, parallel computing techniques are employed: 
 ## System Workflow
 ![alt text](./assets/SystemWorkflow.png)
 
-## Subprojects
+### Built With
+* [![Cplusplus][Cplusplus.com]][Cplusplus-url]
 
+
+## Subprojects
 ### 📊 [pHash_Serial_OpenMP_GCC_O3](./pHash_Generation_Serial_OpenMP_GCC_O3/)
 A command-line tool to generate pHash values for images using serial and OpenMP implementations, with GCC `-O3` optimization.
 
@@ -25,7 +29,7 @@ Features:
 A command-line tool to generate pHash values for images implemented by OpenCV library.
 
 Features:
-- OpenCV acceleration with best performance compared with OpenMP and CUDA
+- OpenCV acceleration with the **best performance** compared with OpenMP and CUDA
 
 ### 📈 [pHash_CUDA](./pHash_CUDA/)
 A command-line tool to generate pHash values for images implemented by three CUDA versions.
