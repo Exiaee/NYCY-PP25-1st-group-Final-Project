@@ -46,7 +46,9 @@ Features:
 - Python OpenCV support for pHash
 
 ## Performance Comparison
-![alt text](./assets/Performance.png)
+![image](https://github.com/user-attachments/assets/3a717296-2da0-407e-bd63-1ea83b0d3811)
+
+
 
 ## Dataset Recommendation
 
