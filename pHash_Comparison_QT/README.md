@@ -1,6 +1,6 @@
 # pHash Comparison QT
 
-A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to search for visually similar images using different processing methods (Sequential, OpenMP, pThread, etc.).
+A Qt-based GUI application for image similarity search using perceptual hashing (pHash). The application allows users to search for visually similar images using different processing methods (Sequential, OpenMP, and PThread).
 
 ## Features
 - Oepn and load SQLite database
